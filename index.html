@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>汽车新闻</title>
+    <!-- <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js">
+    </script> -->
+    <script src="js/flexible.js">
+    </script>
+    <script src="js/jquery-3.2.1.min.js">
+    </script>
+    <script src="js/velocity.min.js">
+    </script>
+    <script src="js/velocity.ui.min.js">
+    </script>
+    <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
+    <link rel="stylesheet/less" href="css/style1.less" type="text/css">
+    <script type="text/javascript" src="js/less.min.js"></script>
+    <!-- <link rel="stylesheet" href="public/css/main.6606f758b8ecfcf3fe07.css"> -->
+</head>
+<body>
+    <header>
+        <a class="title" href="">二手车</a>
+        <h1>汽车新闻</h1>
+        <a class="home" href="#">&#xe902</a>
+    </header>
+
+    <div id="app">
+      <router-view></router-view>
+    </div>
+
+<!-- <script type="text/javascript">
+    $('.list').velocity('transition.fadeIn')
+</script> -->
+<script src="js/vue.js"></script>
+<script src="js/vue-router.js"></script>
+<script type="text/javascript">
+//const 为声明常数，不能改变    var则为声明全局变量，可以改变
+const List = { template: `
+    <div class="list">
+    <ul>
+        <router-link to="/View" tag="li">
+            <p class="title">最美自主车致尚XT竞争力分析</p>
+            <p class="about">
+                <span class="time">07-04 06:30</span>
+                <span class="author">搜狐汽车</span>
+            </p>
+            <img class="flag" src="images/未标题-2.png">
+        </router-link>
+        <router-link to="/View" tag="li">
+            <p class="title">最美自主车致尚XT竞争力分析</p>
+            <p class="about">
+                <span class="time">07-04 06:30</span>
+                <span class="author">搜狐汽车</span>
+            </p>
+            <img class="flag" src="images/未标题-2.png">
+        </router-link>
+        <router-link to="/View" tag="li">
+            <p class="title">最美自主车致尚XT竞争力分析</p>
+            <p class="about">
+                <span class="time">07-04 06:30</span>
+                <span class="author">搜狐汽车</span>
+            </p>
+            <img class="flag" src="images/未标题-2.png">
+        </router-link>
+        <router-link to="/View" tag="li">
+            <p class="title">最美自主车致尚XT竞争力分析</p>
+            <p class="about">
+                <span class="time">07-04 06:30</span>
+                <span class="author">搜狐汽车</span>
+            </p>
+            <img class="flag" src="images/未标题-2.png">
+        </router-link>
+    </ul>
+    <p class="loading">加载中</p>
+    <a href="#">返回顶部</a>
+</div>
+` }
+const View = { template: `
+<div class="wrapper">
+    <router-link to="/" tag="a">返回</router-link>
+    <h2>权利的游戏-------鱼梁木百科</h2>
+    <div class="sub">
+        <span class="time">2017-9-21</span>
+        <span class="author">搜狐新闻</span>
+    </div>
+    <div class="content-box">
+        <img src="images/pic.jpg">
+        <p class="title">这里是小标题</p>
+        <p class="content">这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容</p>
+    </div>
+</div>
+`}
+
+
+const routes = [
+{ path: '/', component: List },
+{ path: '/View', component: View }
+]
+
+//New 初始化一个对象（实体化【把水果变成苹果】）（构造函数）
+const router = new VueRouter({
+routes // （缩写）相当于 routes: routes
+})
+
+const app = new Vue({
+router
+}).$mount('#app')
+</script>
+</body>
+</html>

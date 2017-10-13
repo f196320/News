@@ -1,0 +1,135 @@
+/*属性重置*/
+body,div,p,ul,ol,dl,dt,dd,li,form,input,table,th,td,img,h1,h2,h3,h4,h5,h6 {margin:0;padding:0}
+
+body {background:#eee;font-style:normal;}
+
+em, b, i {font-style:normal;}
+
+ul,ol{list-style:none}
+
+img {border:none}
+
+a {text-decoration:none;color: #333}
+
+a:hover {text-decoration:none;color: #333}
+
+a:link, a:visited, a:active {text-decoration:none;color: #333}
+
+table {border-spacing:0;border-collapse:collapse}
+
+/*常用属性*/
+.flt{float:left}
+
+.frt{float:right}
+
+.clear::before,clear::after{
+    content:"";
+    display: table;
+}
+
+.clear::after{
+    clear: both;
+}
+
+.posistion_f{position: fixed;}
+.posistion_r{position: relative;}
+.posistion_ab{position: absolute;;}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7viy8i');
+  src:  url('../fonts/icomoon.eot?7viy8i#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7viy8i') format('truetype'),
+    url('../fonts/icomoon.woff?7viy8i') format('woff'),
+    url('../fonts/icomoon.svg?7viy8i#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*header*/
+.header_height{
+    height: 1.59rem;
+    line-height: 1.59rem;
+}
+
+header{
+    width: 100%;
+    background-color: #fbcc02;
+    font-family: '宋体';
+    color: #333;
+    z-index: 99;
+    top: 0
+}
+
+header h1{
+    text-align: center;
+    font-size:.63rem;
+    width: 100%;
+}
+
+header a.title{
+    font-size: .56rem;
+    text-align: left;
+    left: .28rem;
+}
+
+header a.home{
+    font-size: .5rem;
+    text-align: right;
+    right: .45rem;
+    top: 0;
+    font-family: 'icomoon';
+}
+
+/*也可以直接在对应地区输入 &#x+编号*/
+/*header a.home:before {
+  content: "\e902";
+}*/
+
+.list{
+    padding:2.11rem .28rem 0 .28rem;
+}
+
+.list ul li{
+    font-family: 'MicrosoftYahei';
+    height: 1.53rem;
+    border-radius: .16rem;
+    border: 1px solid #dadada;
+    padding: .2rem 0 .2rem .3rem;
+    background-color: #fff;
+    margin-bottom: .44rem
+}
+
+.list ul li p.title{
+    font-size: .5rem;
+    color: #333;
+    height: .84rem;
+    line-height: .84rem;
+    font-weight: bold;
+}
+
+.list ul li p.about{
+    font-size: .38rem;
+    color: #a9a9a9;
+    height: .7rem;
+    line-height: .84rem;
+    font-weight: bold;
+}
+
+.list ul li .flag{
+    top:.47rem;
+    right: 1.33rem
+}
+
+.list p.loading{
+    text-align: center;
+    height: 1.25rem;
+    line-height: 1.25rem
+}
+
+.list a{
+    display: block;
+    text-align: center;
+    height: 1.25rem;
+    line-height: 1.25rem
+}

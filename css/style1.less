@@ -1,0 +1,195 @@
+/*属性重置*/
+body,div,p,ul,ol,dl,dt,dd,li,form,input,table,th,td,img,h1,h2,h3,h4,h5,h6 {margin:0;padding:0}
+
+body {background:#eee;font-style:normal;}
+
+em, b, i {font-style:normal;}
+
+ul,ol{list-style:none}
+
+img {border:none}
+
+a {text-decoration:none;color: #333}
+
+a:hover {text-decoration:none;color: #333}
+
+a:link, a:visited, a:active {text-decoration:none;color: #333}
+
+table {border-spacing:0;border-collapse:collapse}
+
+/*常用属性*/
+.flt{float:left}
+
+.frt{float:right}
+
+.clear::before,clear::after{
+    content:"";
+    display: table;
+}
+
+.clear::after{
+    clear: both;
+}
+
+.posistion_f{position: fixed;}
+.posistion_r{position: relative;}
+.posistion_ab{position: absolute;}
+.w100{width: 100%}
+.text_l{text-align: left;}
+.text_c{text-align: center;}
+.text_r{text-align: right;}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7viy8i');
+  src:  url('../fonts/icomoon.eot?7viy8i#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7viy8i') format('truetype'),
+    url('../fonts/icomoon.woff?7viy8i') format('woff'),
+    url('../fonts/icomoon.svg?7viy8i#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*header*/
+.header_height{
+    height: 1.59rem;
+    line-height: 1.59rem;
+    .posistion_f;
+}
+
+header{
+    .header_height;
+    .w100;
+    background-color: #fbcc02;
+    font-family: '宋体';
+    color: #333;
+    z-index: 99;
+    top: 0;
+
+    .title{
+        font-size: .56rem;
+        .text_l;
+        left: .28rem;
+        .posistion_ab;
+    }
+
+    .home{
+        font-size: .5rem;
+        .text_r;
+        right: .45rem;
+        top: 0;
+        font-family: 'icomoon';
+        .posistion_ab;
+    }
+
+    h1{
+        .text_c;
+        font-size:.63rem;
+        .w100;
+    }
+}
+
+
+
+/*也可以直接在对应地区输入 &#x+编号*/
+/*header a.home:before {
+  content: "\e902";
+}*/
+
+.list{
+    padding:1.9rem .28rem 0 .28rem;
+
+    li{
+        .posistion_r;
+        font-family: 'MicrosoftYahei';
+        height: 1.53rem;
+        border-radius: .16rem;
+        border: 1px solid #dadada;
+        padding: .2rem 0 .2rem .3rem;
+        background-color: #fff;
+        margin-bottom: .44rem;
+
+        .title{
+            font-size: .5rem;
+            color: #333;
+            height: .84rem;
+            line-height: .84rem;
+            font-weight: bold;
+        }
+
+        .about{
+            font-size: .38rem;
+            color: #a9a9a9;
+            height: .7rem;
+            line-height: .84rem;
+            font-weight: bold;
+        }
+
+        .flag{
+            top:.47rem;
+            right: 1.33rem;
+            .posistion_ab;
+        }
+    }
+
+    .loading{
+        .text_c;
+        height: 1.25rem;
+        line-height: 1.25rem
+    }
+
+    a{
+        display: block;
+        .text_c;
+        height: 1.25rem;
+        line-height: 1.25rem
+    }
+
+}
+
+.wrapper{
+    .list;
+    background-color: #fff;
+
+    .h2{
+        font-size: 30px;
+        height: 1.13rem;
+        line-height: 1.13rem;
+    }
+
+    .sub{
+        font-size:24px;
+        color:#666;
+        border-bottom: 1px solid #333;
+        height: .67rem;
+        line-height: .67rem;
+        padding-bottom: .33rem;
+
+        .time{
+
+        }
+
+        .author{
+
+        }
+    }
+
+    .content-box{
+        padding-top: .47rem;
+        img{
+            width: 8.85rem;
+            height: 5.47rem
+        }
+
+        .title{
+            font-size: 24px;
+            color: #333;
+        }
+
+        .content{
+            font-size: 28px;
+            line-height: .8rem;
+        }
+
+    }
+}
